@@ -1,0 +1,28 @@
+1.Check the ionospheric corrections in folder ~/fig_ion
+
+2.Decide if mask(s) is needed for ionospheric corrections. Usually only need to mask out isolated areas and decorrelated areas. If so, obtain box coordinates of the mask(s) by viewing a bad corrected interferogram:
+$ cd ~/pairs_ion/??????-??????/ion/ion_cal
+$ mdx.py diff_??????-??????_80rlks_448alks.int
+
+diff_??????-??????_80rlks_448alks.int is the corrected interferogram.
+diff_??????-??????_80rlks_448alks_ori.int is the original interferogram.
+filt_ion_80rlks_448alks.ion is the ionosphere phase.
+These files should have high looks. Box coordinates should follow columns and rows of these high looks files in format of:
+[firstLine, lastLine, firstColumn, lastColumn]
+Min. COL = firstColumn
+Max. COL = lastColumn
+Min. ROW = firstLine
+Max. ROW = lastColumn
+
+See alosStack.xml for more details.
+
+If an irregular shape is needed for the masked area, obtain the box coordinates more easily by doing the following:
+$ cd ~/pairs_ion/??????-??????/ion/ion_cal
+$ execute alosStack_iono2ppm.py, the output is out.ppm
+
+Open out.ppm in GIMP (https://www.gimp.org) in local computer, paint the areas to be masked black, and save as PNG ensuring that the image size remains the same. Then run the MATLAB code alosStack_ionoMask2Coord.m to obtain box coordinates.
+
+3.Copy the obtained box coordinates to your alosStack.xml as:
+<property name="areas masked out in ionospheric phase estimation">[your_box_coordinates]</property>
+
+
