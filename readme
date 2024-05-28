@@ -4,9 +4,11 @@
 $ cd ~/pairs_ion/??????-??????/ion/ion_cal
 $ mdx.py diff_??????-??????_80rlks_448alks.int
 
+fyi:
 diff_??????-??????_80rlks_448alks.int is the corrected interferogram.
 diff_??????-??????_80rlks_448alks_ori.int is the original interferogram.
 filt_ion_80rlks_448alks.ion is the ionosphere phase.
+
 These files should have high looks. Box coordinates should follow columns and rows of these high looks files in format of:
 [firstLine, lastLine, firstColumn, lastColumn]
 Min. COL = firstColumn
