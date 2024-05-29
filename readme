@@ -1,6 +1,7 @@
 1. Check the ionospheric corrections in folder ~/fig_ion
 
-2. Decide if mask(s) is needed for ionospheric corrections. Usually only need to mask out isolated areas and decorrelated areas. If so, obtain box coordinates of the mask(s) by viewing a bad corrected interferogram:
+2. Decide if mask(s) is needed for ionospheric corrections.
+Usually only need to mask out isolated areas and decorrelated areas. If so, obtain box coordinates of the mask(s) by viewing a bad corrected interferogram:
 $ cd ~/pairs_ion/??????-??????/ion/ion_cal
 $ mdx.py diff_??????-??????_80rlks_448alks.int
 
