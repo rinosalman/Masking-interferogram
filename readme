@@ -10,7 +10,7 @@ If an irregular shape is needed for the masked area, obtain the box coordinates 
 cd ~/pairs_ion/??????-??????/ion/ion_cal
 execute alosStack_iono2ppm.py, the output is out.ppm
 
-Open out.ppm in GIMP (https://www.gimp.org), paint the areas to be masked black, and save as PNG ensuring that the image size remains the same. Then run the MATLAB code alosStack_ionoMask2Coord.m to obtain the box   coordinates.
+Open out.ppm in GIMP (https://www.gimp.org), paint the areas to be masked black, and save as PNG ensuring that the image size remains the same. Then run the MATLAB code alosStack_ionoMask2Coord.m to obtain the box coordinates.
 
 3. Copy the obtained box coordinates to your alosStack.xml as:
 <property name="areas masked out in ionospheric phase estimation">[your_box_coordinates]</property>
